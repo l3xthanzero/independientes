@@ -1,2 +1,4 @@
 .project
-.settings/*
+.settings/
+.settings/com.aptana.editor.php.prefs
+.gitignore
