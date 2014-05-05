@@ -4,7 +4,7 @@
 
 function randomString($length = 10, $letters = NULL){
 	//Si no nos especifican lo contrario usaremos un conjunto de letras por defecto
-	if($letters==NULL || strlen($letters) == 0){
+	if(!is_string($letters) || strlen($letters) == 0){
 		$letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890._"; //Por defecto usaremos todas estas letras
 	}
 	
