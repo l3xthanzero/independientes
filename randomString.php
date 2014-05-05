@@ -4,7 +4,7 @@
 
 function randomString($length = 10, $letters = NULL){
 	//Si no nos especifican lo contrario usaremos un conjunto de letras por defecto
-	if(!isset($letters) || strlen($letters) == 0){
+	if($letters==NULL || strlen($letters) == 0){
 		$letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890._"; //Por defecto usaremos todas estas letras
 	}
 	
@@ -12,7 +12,7 @@ function randomString($length = 10, $letters = NULL){
 	$max = strlen($letters)-1;
 	
 	for($i=0; $i<$length; $i++){
-		$str .= $letters[rand(0,$max)]; //Hasta que tengamos $length caracteres agregamos una letra al hazar del conjunto $letters
+		$str .= $letters[rand(0,$max)]; //Hasta que tengamos $length caracteres agregamos una letra al azar del conjunto $letters
 	}
 	
 	return $str;
